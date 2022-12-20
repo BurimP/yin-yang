@@ -1,0 +1,143 @@
+body {
+  background: rgb(104, 177, 185);
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.circle {
+  width: 300px;
+  height: 300px;
+  background: black;
+  border-radius: 100%;
+  text-align: center;
+  animation: rotate 40000s infinite;
+  transition: 1s ease-in-out;
+}
+
+.yin {
+  width: 150px;
+  height: 150px;
+  background: white;
+  border-radius: 100%;
+  transition: 1s ease-in-out;
+}
+
+.yang {
+  width: 150px;
+  height: 150px;
+  background: black;
+  border-radius: 100%;
+  margin-top: -154px;
+  z-index: auto;
+  position: absolute;
+  margin-left: 75px;
+  transition: 1s ease-in-out;
+}
+
+.feher {
+  width: 150px;
+  height: 300px;
+  background: white;
+  display: inline-block;
+  margin-top: -150px;
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+  transition: 1s ease-in-out;
+}
+
+.p-black {
+  width: 50px;
+  height: 50px;
+  background: black;
+  border-radius: 100%;
+  position: absolute;
+  margin-top: -260px;
+  margin-left: 120px;
+  transition: 1s ease-in-out;
+}
+
+.p-white {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 100%;
+  position: absolute;
+  margin-top: -110px;
+  margin-left: 120px;
+  transition: 1s ease-in-out;
+}
+
+/* Toggle */
+.switch {
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(249, 191, 104);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #21f364;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-3600000deg);
+  }
+}
